@@ -1,0 +1,15 @@
+
+  <header>
+    <div class="brand">
+      <a href="{{ site.baseurl }}/index.html"><img src="{{ '/img/logo.png' | prepend: site.baseurl }}" alt="Logo do Eirene"></a>
+    </div>
+    
+    <div class="title">
+      {% if page.title == page.type %}
+        <h1>{{ page.title }}</h1>
+      {% else %}
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.type }}</h2>
+      {% endif %}
+    </div>
+  </header>

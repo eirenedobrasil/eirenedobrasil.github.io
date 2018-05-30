@@ -1,0 +1,74 @@
+---
+layout: default
+title:  Levando famílias à harmonia.
+---
+
+<div class="main-content">
+  {% for cursos in site.cursos %}
+    {% if cursos.title and cursos.layout == 'main-page' %}
+      
+      <div class="cursos">
+        <img src="{{ site.baseurl }}/img/cursos.jpg">
+        <div class="intro">
+          <h3>{{ cursos.title }}</h3>
+          {{ cursos.meta | markdownify }}
+          <a href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor%}
+  
+  
+  {% for seminarios in site.seminarios %}
+    {% if seminarios.title and seminarios.layout == 'main-page' %}
+      
+      <div class="seminarios">
+        <img src="{{ site.baseurl }}/img/seminarios.jpg">
+        <div class="intro">
+          <h3>{{ seminarios.title }}</h3>
+          {{ seminarios.meta | markdownify }}
+          <a href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor%}
+    
+    <div class="noticias">
+      <h3>O que estamos fazendo</h3>
+  
+    {% for post in site.posts limit:5 %}
+     
+      <div class="copy">
+        <a href="{{ site.baseurl }}/{{ post.url }}"> 
+        <div class="news-index">
+          <div class="featured-img">
+            <img src="{{ site.baseurl }}/{{ post.img }}" alt="">
+          </div>
+          
+          <div class="trecho">
+            <h4 class="news">{{ post.title }}</h4>
+            <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
+          </div>
+        </div>
+        </a> 
+      </div>
+    {% endfor%}
+  
+    
+    <div class="copy"><h4 style="text-align: right;"><a href="{{ site.baseurl }}/noticias.html"><em>Notícias antigas »</em></a></h4></div>
+  </div>
+  
+  <div class="publicacoes">
+    <h3>Publicações</h3>
+    <div class="copy">
+      <p>Parte da nossa <a href="{{ site.baseurl }}/quemsomos/">missão</a> é publicar conteúdo que ajude  pastores, psicólogos e voluntários a estarem melhores preparados a cuidarem da família. </p>
+  
+      <h4><a href="{{ site.baseurl }}/artigos/">Artigos</a></h4>
+      <p>Os <a href="{{ site.baseurl }}/artigos/">artigos</a> são escritos pelos nossos professores e podem ser lidos na <a href="{{ site.baseurl }}/artigos/">página dos artigos.</a></p> 
+      
+      <h4><a href="{{ site.baseurl }}/monografias/">Monografias</a></h4>
+      <p>Você pode também consultar as <a href="{{ site.baseurl }}/monografias/">monografias</a> publicadas pelos nossos alunos escritos no final dos <a href="{{ site.baseurl }}/cursos/">nossos cursos.</a></p>
+      <p>As monografias podem ser adquiridas por correio ou por email. Mais informações estão disponíveis na <a href="{{ site.baseurl }}/monografias/">página das monografias.</a></p>
+    </div> 
+  </div>
+</div>

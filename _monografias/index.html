@@ -1,0 +1,21 @@
+---
+layout: default
+title: Monografias
+img: aconselhamento.jpg
+meta: 
+---
+<div class="copy">
+  <h2>Abaixo seguem as monografias publicadas por nossos alunos.</h2>
+  
+  <p>Caso você tenha interesse em alguma monografia, basta mandar um email para <a href="{{ site.baseurl }}/mailto:eirene@eirene.com.br">eirene@eirene.com.br</a> que a gente envia a monografia pra você.</p>
+
+  <p>Caso deseje receber os textos impressos, nos envie um email solicitando que informaremos os valores de cópia e de remessa. Depois é só depositar o valor na conta do Eirene e nos comunicar por e-mail a data e o valor do depósito que imediatamente enviamos texto para seu endereço.</p>
+  
+  {% for monografias in site.data.monografia %}
+    <div class="mono">
+      <h3>{{ monografias.title }}</h3>
+      {{ monografias.content | markdownify }}
+      <hr>
+    </div>
+  {% endfor %}
+</div>

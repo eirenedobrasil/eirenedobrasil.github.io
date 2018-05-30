@@ -1,0 +1,21 @@
+---
+layout: posts
+title: Artigos
+type: Artigos
+meta:
+---
+
+
+<div class="copy"><h2>Segue abaixo a lista dos artigos publicados pelos nossos professores</h2>
+  
+  {% for artigos in site.artigos %}
+    {% if artigos.layout == 'texto' %}
+    <h3>{{ artigos.title }}</h3>
+    <p>Por {{ artigos.autor }}</p>
+  
+    <a href="{{ site.baseurl }}/{{ artigos.url }}">Quero ler mais…</a>
+    <hr>
+    {% endif %}
+  {% endfor %}
+</div>
+

@@ -1,0 +1,30 @@
+---
+layout: main-page
+title: Estude com a gente
+type: Cursos
+img: ../img/cursos.jpg
+permalink: /cursos/
+hero: cursos
+meta: |
+  O Eirene existe para levar famílias à harmonia. Uma forma de nós alcançarmos esse objetivo é dando treinamento acadêmico para leigos e profissionais.
+
+  Nós temos cursos voltados para pessoas em vários níveis acadêmicos, desde aqueles que trabalham profissionalmente com famílias e procuram uma formação que vá lhes dar ferramentas melhores no trabalho, até para aqueles que queiram somente se aprofundar no assunto família sem a exigência de uma graduação.
+
+  Todos esses cursos são certificados e podem ter um peso muito positivo no seu currículo.
+---
+
+
+{% for cursos in site.cursos %}
+  
+  {% if cursos.layout == 'inscreva' %}
+  <div class="card">
+    <h3><a href="{{ site.baseurl }}/{{ cursos.url }}">{{ cursos.title }}</a></h3>
+    <a href="{{ site.baseurl }}/{{ cursos.url }}"><img src="{{ cursos.img }}" alt=""></a>
+    <p>{{ cursos.meta }}</p>
+    
+    <a href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais sobre o Curo de {{ cursos.title }}</a>
+  </div>
+  {% endif %}
+  
+{% endfor %}
+

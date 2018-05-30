@@ -1,0 +1,12 @@
+---
+layout: default
+title: Notícias
+permalink: /noticias/
+---
+<div class="copy">
+  {% for post in site.posts %}
+    <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <p>{{ post.content }}</p>
+    <hr>
+  {% endfor %}
+</div>
