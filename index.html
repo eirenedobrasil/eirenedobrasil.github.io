@@ -8,12 +8,10 @@ title:  Levando famílias à harmonia.
     {% if cursos.title and cursos.layout == 'main-page' %}
       
       <div class="cursos">
-        <img src="{{ site.baseurl }}/img/cursos.jpg">
-        <div class="intro">
           <h3>{{ cursos.title }}</h3>
           {{ cursos.meta | markdownify }}
           <a href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
-        </div>
+        
       </div>
     {% endif %}
   {% endfor%}
@@ -23,12 +21,9 @@ title:  Levando famílias à harmonia.
     {% if seminarios.title and seminarios.layout == 'main-page' %}
       
       <div class="seminarios">
-        <img src="{{ site.baseurl }}/img/seminarios.jpg">
-        <div class="intro">
           <h3>{{ seminarios.title }}</h3>
           {{ seminarios.meta | markdownify }}
           <a href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
-        </div>
       </div>
     {% endif %}
   {% endfor%}
