@@ -3,14 +3,16 @@ layout: default
 title:  Levando famílias à harmonia.
 ---
 
-<div class="main-content">
+
   {% for cursos in site.cursos %}
     {% if cursos.title and cursos.layout == 'main-page' %}
       
-      <div class="cursos">
-          <h3>{{ cursos.title }}</h3>
-          {{ cursos.meta | markdownify }}
-          <a href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
+      <div class="box box--cursos">
+          <div class="box--content">
+            <h3>{{ cursos.title }}</h3>
+            {{ cursos.meta | markdownify }}
+            <a href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
+          </div>
         
       </div>
     {% endif %}
@@ -20,10 +22,12 @@ title:  Levando famílias à harmonia.
   {% for seminarios in site.seminarios %}
     {% if seminarios.title and seminarios.layout == 'main-page' %}
       
-      <div class="seminarios">
-          <h3>{{ seminarios.title }}</h3>
-          {{ seminarios.meta | markdownify }}
-          <a href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+      <div class="box box--seminarios">
+          <div class="box--content">
+            <h3>{{ seminarios.title }}</h3>
+            {{ seminarios.meta | markdownify }}
+            <a href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+          </div>
       </div>
     {% endif %}
   {% endfor%}
@@ -66,4 +70,4 @@ title:  Levando famílias à harmonia.
       <p>As monografias podem ser adquiridas por correio ou por email. Mais informações estão disponíveis na <a href="{{ site.baseurl }}/monografias/">página das monografias.</a></p>
     </div> 
   </div>
-</div>
+
