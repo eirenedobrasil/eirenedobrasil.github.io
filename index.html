@@ -6,14 +6,13 @@ title:  Levando famílias à harmonia.
 
   {% for cursos in site.cursos %}
     {% if cursos.title and cursos.layout == 'main-page' %}
-      
-      <div class="box box--cursos">
-          <div class="box--content">
-            <h3>{{ cursos.title }}</h3>
+      <div onclick="location.href='{{ site.baseurl }}/{{ cursos.url }}';" class="box">
+        <div class="box--esquerda box--cursos"><h3>{{ cursos.title }}</h3></div>
+          <div class="box--direita">
+            
             {{ cursos.meta | markdownify }}
-            <a href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
+            <a class="button--dark" href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
           </div>
-        
       </div>
     {% endif %}
   {% endfor%}
@@ -22,11 +21,13 @@ title:  Levando famílias à harmonia.
   {% for seminarios in site.seminarios %}
     {% if seminarios.title and seminarios.layout == 'main-page' %}
       
-      <div class="box box--seminarios">
-          <div class="box--content">
-            <h3>{{ seminarios.title }}</h3>
+      <div onclick="location.href='{{ site.baseurl }}/{{ seminarios.url }}';" class="box">
+          <div class="box--esquerda">
             {{ seminarios.meta | markdownify }}
-            <a href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+            <a class="button--dark" href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+          </div>
+          <div class="box--direita box--seminarios">
+            <h3>{{ seminarios.title }}</h3>
           </div>
       </div>
     {% endif %}

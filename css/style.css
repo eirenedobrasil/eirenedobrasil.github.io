@@ -76,20 +76,12 @@ li {
   font-weight: normal;
 }
 
-.box h3 {
-  background: var(--titleBg);
-  display: inline-flex;
-  font-size: 2rem;
-  padding: .5rem;
-  margin: 1rem 0;
-  grid-column: 2;
-}
-
 .noticias h3, .publicacoes h3 {
   background: var(--azul2ndTitleBG);
   border-top: solid 5px var(--laranjaCTAbg);
   font-size: 1.5rem;
   padding: .5rem 1rem;
+  text-align: center;
 }
 
 .mono h3 {
@@ -106,6 +98,7 @@ hr {
   height: 1px;
   margin-top: 1rem;
 }
+
 
 /* LINKS */
 
@@ -144,15 +137,28 @@ nav a {
   transform-origin: bottom left;
 }
 
+/* Buttons */
+
+a.button--dark {
+  color: var(--brancoCTAbg);
+  background: var(--laranjaCTAbg);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
 /* HEADER */
 
 header{
   background: var(--azul2ndTitleBG);
+  background-image: url(../img/header-bg.gif);
+  background-repeat: repeat-x;
   width: 100%;
   display: grid;
   align-items: baseline;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto 300px;
+  grid-template-rows: repeat(2, auto);
+  animation: loop infinite 2s;
 }
 
 .brand { 
@@ -161,7 +167,7 @@ header{
   padding: 1em 0 0 1em; 
 }
 
-.brand img {width: 78px;}
+.brand img {width: 155px;}
 
 nav {
   grid-column: 3/ last-line;
@@ -169,8 +175,19 @@ nav {
 }
 
 .hero {
-  grid-column: 1/ last-line;
+  grid-column: 4/ 10;
   grid-row: 2/ last-line;
+  text-align: center;
+}
+
+.hero > h1 {
+  font-family: chivo, sans-serif;
+  margin-top: 4rem;
+}
+
+.hero > h2 {
+  font-style: italic;
+  margin-bottom: 4rem;
 }
 
 
@@ -190,37 +207,56 @@ nav > ul > li {
 }
 
 .box {
-  background: cover;
-  background-size: 100%;
-  background-position: center;
-  transition: all .2s ease-in-out;
+  margin: 5rem 0;
   display: grid;
   grid-template-columns: 
-    minmax(1rem, 1fr) minmax(auto, 58rem) minmax(1rem, 1fr);
+    minmax(1rem, 1fr) minmax(auto, 29rem) minmax(auto, 29rem) minmax(1rem, 1fr);
+  grid-gap: 1rem; 
+  cursor: pointer;
 }
 
-.box > .box--content {
+.box h3 {
+  background: var(--titleBg);
+  display: inline-flex;
+  font-size: 2rem;
+  padding: .5rem;
+  margin: 1rem;
+}
+
+.box > .box--esquerda {
+  border-top: solid 1px var(--laranjaCTAbg);
   grid-column: 2/3;
 }
 
-.box > h3 {
-  margin-bottom: 2rem;
+.box > .box--direita {
+  border-top: solid 1px var(--laranjaCTAbg);
+  grid-column: 3/4;
 }
 
-.box:hover {
-  background-size: 110%;
+.box > .box--cursos, .box > .box--seminarios {
+  border-top: solid 1px var(--laranjaCTAbg);
+  background: cover;
   background-position: center;
+  transition: all .2s ease-in-out;
 }
 
 .box--cursos {
   background-image: url(../img/cursos.jpg);
+  background-size: auto 383px;
 }
 
 .box--seminarios {
   background-image: url('../img/seminarios.jpg');
+  background-size: auto 449px;
 }
 
+.box--seminarios:hover {
+  background-size: auto 420px;
+}
 
+.box--cursos:hover {
+  background-size: auto 470px;
+}
 
 .copy {
   margin: 1rem;
@@ -308,4 +344,10 @@ footer {
   background: var(--brancoCTAbg); 
   color: var(--text);
   margin: 1rem 0rem 3rem 0rem;
+}
+
+/* ANIMATIONS */
+
+@keyframes loop {
+  
 }
