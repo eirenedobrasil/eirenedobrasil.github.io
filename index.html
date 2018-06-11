@@ -8,8 +8,8 @@ title:  Levando famílias à harmonia.
     {% if cursos.title and cursos.layout == 'main-page' %}
       <div onclick="location.href='{{ site.baseurl }}/{{ cursos.url }}';" class="box">
         <div class="box--esquerda box--cursos"><h3>{{ cursos.title }}</h3></div>
-          <div class="box--direita">
-            
+          <div class="box--direita --rullerOnTop">
+            <h4>Nossos Cursos</h4>
             {{ cursos.meta | markdownify }}
             <a class="button--dark" href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
           </div>
@@ -22,7 +22,8 @@ title:  Levando famílias à harmonia.
     {% if seminarios.title and seminarios.layout == 'main-page' %}
       
       <div onclick="location.href='{{ site.baseurl }}/{{ seminarios.url }}';" class="box">
-          <div class="box--esquerda">
+          <div class="box--esquerda --rullerOnTop">
+            <h4>Nossos Seminários</h4>
             {{ seminarios.meta | markdownify }}
             <a class="button--dark" href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
           </div>
@@ -33,32 +34,31 @@ title:  Levando famílias à harmonia.
     {% endif %}
   {% endfor%}
     
-    <div class="noticias">
+    <div class="divider">
       <h3>O que estamos fazendo</h3>
   
     {% for post in site.posts limit:5 %}
      
-      <div class="copy">
-        <a href="{{ site.baseurl }}/{{ post.url }}"> 
-        <div class="news-index">
-          <div class="featured-img">
-            <img src="{{ site.baseurl }}/{{ post.img }}" alt="">
-          </div>
-          
-          <div class="trecho">
-            <h4 class="news">{{ post.title }}</h4>
-            <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
-          </div>
+      <div onclick="location.href='{{ site.baseurl }}/{{ post.url }}'" class="box">
+        
+        <div class="box--esquerda">
+          <img src="{{ site.baseurl }}/{{ post.img }}" alt="">
         </div>
-        </a> 
+        
+        <div class="box--direita --rullerOnTop">
+          <h5>{{ post.tag }}</h5>
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
+        </div>
       </div>
+
     {% endfor%}
   
     
     <div class="copy"><h4 style="text-align: right;"><a href="{{ site.baseurl }}/noticias.html"><em>Notícias antigas »</em></a></h4></div>
   </div>
   
-  <div class="publicacoes">
+  <div class="divider">
     <h3>Publicações</h3>
     <div class="copy">
       <p>Parte da nossa <a href="{{ site.baseurl }}/quemsomos/">missão</a> é publicar conteúdo que ajude  pastores, psicólogos e voluntários a estarem melhores preparados a cuidarem da família. </p>

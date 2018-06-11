@@ -76,14 +76,6 @@ li {
   font-weight: normal;
 }
 
-.noticias h3, .publicacoes h3 {
-  background: var(--azul2ndTitleBG);
-  border-top: solid 5px var(--laranjaCTAbg);
-  font-size: 1.5rem;
-  padding: .5rem 1rem;
-  text-align: center;
-}
-
 .mono h3 {
   padding-top: .5rem;
 }
@@ -150,6 +142,7 @@ a.button--dark {
 /* HEADER */
 
 header{
+  animation: slide 2s forwards;
   background: var(--azul2ndTitleBG);
   background-image: url(../img/header-bg.gif);
   background-repeat: repeat-x;
@@ -158,7 +151,9 @@ header{
   align-items: baseline;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, auto);
-  animation: loop infinite 2s;
+  position: relative;
+  left: -100%;
+  z-index: -1;
 }
 
 .brand { 
@@ -207,6 +202,7 @@ nav > ul > li {
 }
 
 .box {
+  animation: fade 2s;
   margin: 5rem 0;
   display: grid;
   grid-template-columns: 
@@ -223,14 +219,23 @@ nav > ul > li {
   margin: 1rem;
 }
 
+.box h4 {
+  color: var(--laranjaCTAbg);
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin: .2rem 0;
+}
+
 .box > .box--esquerda {
-  border-top: solid 1px var(--laranjaCTAbg);
   grid-column: 2/3;
 }
 
 .box > .box--direita {
-  border-top: solid 1px var(--laranjaCTAbg);
   grid-column: 3/4;
+}
+
+.--rullerOnTop {
+  border-top: solid 1px var(--laranjaCTAbg);
 }
 
 .box > .box--cursos, .box > .box--seminarios {
@@ -242,20 +247,34 @@ nav > ul > li {
 
 .box--cursos {
   background-image: url(../img/cursos.jpg);
-  background-size: auto 383px;
+  background-size: auto 500px;
 }
 
 .box--seminarios {
   background-image: url('../img/seminarios.jpg');
-  background-size: auto 449px;
+  background-size: auto 500px;
 }
 
 .box--seminarios:hover {
-  background-size: auto 420px;
+  background-size: auto 530px;
 }
 
 .box--cursos:hover {
-  background-size: auto 470px;
+  background-size: auto 530px;
+}
+
+.divider h3 {
+  background: var(--azul2ndTitleBG);
+  border-top: solid 5px var(--laranjaCTAbg);
+  font-size: 1.5rem;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+.divider h5{
+  font-size: .8rem;
+  margin: .2rem 0;
+  text-transform: uppercase;
 }
 
 .copy {
@@ -348,6 +367,11 @@ footer {
 
 /* ANIMATIONS */
 
-@keyframes loop {
-  
+@keyframes slide {
+  100% { left: 0%; }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
