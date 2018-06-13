@@ -6,8 +6,8 @@ title:  Levando famílias à harmonia.
 
   {% for cursos in site.cursos %}
     {% if cursos.title and cursos.layout == 'main-page' %}
-      <div onclick="location.href='{{ site.baseurl }}/{{ cursos.url }}';" class="box">
-        <div class="box--esquerda box--cursos"><h3>{{ cursos.title }}</h3></div>
+      <div onclick="location.href='{{ site.baseurl }}/{{ cursos.url }}';" class="box --hidden --anchor">
+        <div class="box--esquerda box--anim box--cursos"><h3>{{ cursos.title }}</h3></div>
           <div class="box--direita --rullerOnTop">
             <h4>Nossos Cursos</h4>
             {{ cursos.meta | markdownify }}
@@ -21,13 +21,13 @@ title:  Levando famílias à harmonia.
   {% for seminarios in site.seminarios %}
     {% if seminarios.title and seminarios.layout == 'main-page' %}
       
-      <div onclick="location.href='{{ site.baseurl }}/{{ seminarios.url }}';" class="box">
+      <div onclick="location.href='{{ site.baseurl }}/{{ seminarios.url }}';" class="box --hidden --anchor">
           <div class="box--esquerda --rullerOnTop">
             <h4>Nossos Seminários</h4>
             {{ seminarios.meta | markdownify }}
             <a class="button--dark" href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
           </div>
-          <div class="box--direita box--seminarios">
+          <div class="box--direita box--anim box--seminarios">
             <h3>{{ seminarios.title }}</h3>
           </div>
       </div>
@@ -37,38 +37,42 @@ title:  Levando famílias à harmonia.
     <div class="divider">
       <h3>O que estamos fazendo</h3>
   
-    {% for post in site.posts limit:5 %}
-     
-      <div onclick="location.href='{{ site.baseurl }}/{{ post.url }}'" class="box">
-        
-        <div class="box--esquerda">
-          <img src="{{ site.baseurl }}/{{ post.img }}" alt="">
-        </div>
-        
-        <div class="box--direita --rullerOnTop">
-          <h5>{{ post.tag }}</h5>
-          <h4>{{ post.title }}</h4>
-          <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
-        </div>
-      </div>
-
-    {% endfor%}
-  
     
-    <div class="copy"><h4 style="text-align: right;"><a href="{{ site.baseurl }}/noticias.html"><em>Notícias antigas »</em></a></h4></div>
+     
+      <div onclick="location.href='{{ site.baseurl }}/{{ post.url }}'" class="box --hidden --anchor">
+    
+      {% for post in site.posts limit:6 %}
+        <div class="box--card --shadow --rullerOnTop box--anim">
+          <div class="box--cardImg">
+            <img src="{{ site.baseurl }}/{{ post.img }}" alt="">
+          </div>
+          <div class="box--cardText">
+            <h5>{{ post.tag }}</h5>
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
+          </div>
+        </div>
+      {% endfor%}
+     
+        
+    <p class="--more"><a href="{{ site.baseurl }}/noticias.html">Notícias antigas »</a></p> 
+    </div> 
   </div>
+  
   
   <div class="divider">
     <h3>Publicações</h3>
-    <div class="copy">
-      <p>Parte da nossa <a href="{{ site.baseurl }}/quemsomos/">missão</a> é publicar conteúdo que ajude  pastores, psicólogos e voluntários a estarem melhores preparados a cuidarem da família. </p>
-  
-      <h4><a href="{{ site.baseurl }}/artigos/">Artigos</a></h4>
-      <p>Os <a href="{{ site.baseurl }}/artigos/">artigos</a> são escritos pelos nossos professores e podem ser lidos na <a href="{{ site.baseurl }}/artigos/">página dos artigos.</a></p> 
-      
-      <h4><a href="{{ site.baseurl }}/monografias/">Monografias</a></h4>
-      <p>Você pode também consultar as <a href="{{ site.baseurl }}/monografias/">monografias</a> publicadas pelos nossos alunos escritos no final dos <a href="{{ site.baseurl }}/cursos/">nossos cursos.</a></p>
-      <p>As monografias podem ser adquiridas por correio ou por email. Mais informações estão disponíveis na <a href="{{ site.baseurl }}/monografias/">página das monografias.</a></p>
+    <div class="box --hidden">
+      <div class="box--full">
+        <p>Parte da nossa <a href="{{ site.baseurl }}/quemsomos/">missão</a> é publicar conteúdo que ajude  pastores, psicólogos e voluntários a estarem melhores preparados a cuidarem da família. </p>
+          
+        <h4><a href="{{ site.baseurl }}/artigos/">Artigos</a></h4>
+        <p>Os <a href="{{ site.baseurl }}/artigos/">artigos</a> são escritos pelos nossos professores e podem ser lidos na <a href="{{ site.baseurl }}/artigos/">página dos artigos.</a></p> 
+        
+        <h4><a href="{{ site.baseurl }}/monografias/">Monografias</a></h4>
+        <p>Você pode também consultar as <a href="{{ site.baseurl }}/monografias/">monografias</a> publicadas pelos nossos alunos escritos no final dos <a href="{{ site.baseurl }}/cursos/">nossos cursos.</a></p>
+        <p>As monografias podem ser adquiridas por correio ou por email. Mais informações estão disponíveis na <a href="{{ site.baseurl }}/monografias/">página das monografias.</a></p>
+      </div>
     </div> 
   </div>
 

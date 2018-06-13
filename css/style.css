@@ -2,14 +2,12 @@
 ---
 
 :root {
-  --laranjaCTAbg: #aa382d;
-  --azul2ndTitleBG: #84bdcf;
-  --brancoCTAbg: #fefefe;
-  --bg: #eedec4;
+  --laranja: #aa382d;
+  --azulClaro: #84bdcf;
+  --branco: #fefefe;
   --text: #141827;
-  --claroText: #273671;
-  --headerBg: #e2c89c;
-  --titleBg: #e8b32c;
+  --azulMedio: #273671;
+  --amarelo: #e8b32c;
 }
 
 html, body { height: 100%; }
@@ -59,7 +57,7 @@ h1, h2, h3 {
 }
 
 .copy h2, .copy h3, .copy h4, .title {
-  color: var(--claroText);
+  color: var(--azulMedio);
 }
 
 p {
@@ -81,11 +79,11 @@ li {
 }
 
 .mono em, strong {
-  color: var(--claroText);
+  color: var(--azulMedio);
 }
 
 hr {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--laranjaCTAbg), var(--laranjaCTAbg), var(--laranjaCTAbg),rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--laranja), var(--laranja), var(--laranja),rgba(0, 0, 0, 0));
   border: 0;
   height: 1px;
   margin-top: 1rem;
@@ -105,13 +103,22 @@ nav a {
 }
 
 .content a {
-  color: var(--laranjaCTAbg);
+  color: var(--laranja);
   display: inline-block;
   position: relative;
   text-decoration: none;
 }
 
-.content a::after{
+.--more {
+  font-family: Unna, serif;
+  font-style: italic;
+  text-align: right;
+  grid-column: 2/4;
+  margin: 2rem 0 0 0;
+  font-size: 1.2rem;
+}
+
+p > a::after{
   content: '';
   position: absolute;
   width: 100%;
@@ -119,12 +126,12 @@ nav a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--laranjaCTAbg);
+  background-color: var(--laranja);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
-.content a:hover::after {
+p > a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -132,18 +139,30 @@ nav a {
 /* Buttons */
 
 a.button--dark {
-  color: var(--brancoCTAbg);
-  background: var(--laranjaCTAbg);
+  color: var(--branco);
+  background: var(--laranja);
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
+  box-shadow: 4px 4px 2px rgba(0,0,0,.3);
 }
+
+a.button--dark:hover {
+  color: var(--branco);
+  background: var(--text);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0;
+}
+
+a.button--dark::after { content: none; }
 
 /* HEADER */
 
 header{
   animation: slide 2s forwards;
-  background: var(--azul2ndTitleBG);
+  background: var(--azulClaro);
   background-image: url(../img/header-bg.gif);
   background-repeat: repeat-x;
   width: 100%;
@@ -202,28 +221,44 @@ nav > ul > li {
 }
 
 .box {
-  animation: fade 2s;
   margin: 5rem 0;
   display: grid;
   grid-template-columns: 
     minmax(1rem, 1fr) minmax(auto, 29rem) minmax(auto, 29rem) minmax(1rem, 1fr);
-  grid-gap: 1rem; 
-  cursor: pointer;
+  transition: all .2s ease-in-out;
 }
 
-.box h3 {
-  background: var(--titleBg);
-  display: inline-flex;
-  font-size: 2rem;
-  padding: .5rem;
-  margin: 1rem;
+.box--full {
+  grid-column: 2/4;
 }
 
-.box h4 {
-  color: var(--laranjaCTAbg);
-  text-transform: uppercase;
+.box--card {
+  grid-column: 2/4;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  border: 1px solid #ccc;
+  transition: ease 1s;
+  margin-top: 2rem;
+}
+
+.box--card:first-child{
+  margin-top: 0;
+}
+
+.box--card > .box--cardImg, 
+.box--card > .box--cardText {
+  padding: 2rem;
+}
+
+.box--card:hover {
+  border-top: 10px solid var(--laranja);
+}
+
+.box--card h5{
   font-size: .8rem;
   margin: .2rem 0;
+  text-transform: uppercase;
 }
 
 .box > .box--esquerda {
@@ -232,14 +267,11 @@ nav > ul > li {
 
 .box > .box--direita {
   grid-column: 3/4;
-}
-
-.--rullerOnTop {
-  border-top: solid 1px var(--laranjaCTAbg);
+  padding-left: 1rem;
 }
 
 .box > .box--cursos, .box > .box--seminarios {
-  border-top: solid 1px var(--laranjaCTAbg);
+  border-top: solid 1px var(--laranja);
   background: cover;
   background-position: center;
   transition: all .2s ease-in-out;
@@ -255,94 +287,54 @@ nav > ul > li {
   background-size: auto 500px;
 }
 
-.box--seminarios:hover {
-  background-size: auto 530px;
+.box h3 {
+  background: var(--amarelo);
+  display: inline-flex;
+  font-size: 2rem;
+  padding: .5rem;
+  margin: 1rem;
 }
 
-.box--cursos:hover {
-  background-size: auto 530px;
+.box h4 {
+  color: var(--laranja);
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin: .2rem 0;
 }
 
-.divider h3 {
-  background: var(--azul2ndTitleBG);
-  border-top: solid 5px var(--laranjaCTAbg);
+.divider > h3 {
+  background: var(--azulClaro);
+  border-top: solid 5px var(--laranja);
   font-size: 1.5rem;
+  grid-column: 1/ last-line;
   padding: .5rem 1rem;
   text-align: center;
 }
 
-.divider h5{
-  font-size: .8rem;
-  margin: .2rem 0;
-  text-transform: uppercase;
+.divider > h4 {
+  grid-column: 1/last-line;
 }
 
-.copy {
-  margin: 1rem;
+.box--anim { transition: all .2s ease-in-out; }
+
+.box--anim:hover{
+  transform: scale(1.03);
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, .2);
 }
 
-.news-index {
-  background: var(--headerBg);
-  margin: 1rem 0;
+.--rullerOnTop {
+  border-top: solid 3px var(--laranja);
 }
 
-.news-index:hover {
-  box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+.--shadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
-.news-index:first-child {
-  border-top: none;
-}
-
-.trecho {
-  padding: .2rem 1rem;
-}
-
-@media screen and (min-width: 644px) {
-  .copy {
-    margin: 0 auto;
-    max-width: 38rem;
-  }
-
-  .news-index {
-    display: flex;
-  }
-
-  .featured-img{
-    flex: 0 0 30%;
-  }
-
-  .trecho {
-    flex: 0 0 70%;
-    padding-left: 1rem;
-  }
-}
-
-.card { 
-  background: #f8ecd9; 
-  padding: 1rem;
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: auto minmax(auto, 38rem) auto;
-  box-shadow: 5px -5px 4px rgba(0, 0, 0, .2);
-}
-
-.card:hover {
-  box-shadow: none;
-}
-
-.card > h3, .card > img, .card > p, .card > a {
-  grid-column: 2;
-}
-
-.card > h3 { 
-  margin-top: 0; 
-  color: var(--laranjaCTAbg);
-}
+.--anchor { cursor: pointer; }
 
 .cta{
-  background: var(--laranjaCTAbg);
-  color: var(--brancoCTAbg);
+  background: var(--laranja);
+  color: var(--branco);
   font-family: Chivo, Verdana, sans;
   font-weight: regular;
   font-size: 1rem;
@@ -360,12 +352,16 @@ nav > ul > li {
 /* FOOTER */
 
 footer { 
-  background: var(--brancoCTAbg); 
+  background: var(--branco); 
   color: var(--text);
   margin: 1rem 0rem 3rem 0rem;
 }
 
 /* ANIMATIONS */
+
+.--fade { animation: fade 2s; }
+
+.hidden { opacity: 0; }
 
 @keyframes slide {
   100% { left: 0%; }
