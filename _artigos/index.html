@@ -17,9 +17,8 @@ meta:
         {% if artigos.layout == 'texto' %}
         <h3>{{ artigos.title }}</h3>
         <p>Por {{ artigos.autor }}</p>
-      
-        <p class="--more"><a href="{{ site.baseurl }}/{{ artigos.url }}">Quero ler mais…</a>
-        </p>
+        <p><em>{{ artigos.excerpt }}</em> <span class="--more"><a href="{{ site.baseurl }}/{{ artigos.url }}">Quero ler mais…</a>
+        </span></p>
         <hr>
         {% endif %}
       {% endfor %}</div>

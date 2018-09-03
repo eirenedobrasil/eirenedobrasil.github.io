@@ -9,4 +9,24 @@
 <script src="{{ site.baseurl }}/js/menu.js"></script>
 <script src="{{ site.baseurl }}/js/touch.js"></script>
 <script src="{{ site.baseurl }}/js/scroll-anim.js"></script>
+<script src="{{ site.baseurl }}/js/breadcrumb.js"></script>
+<script src="{{ site.baseurl }}/js/swup.js"></script>
+<script>var swup = new Swup() </script>
+
+{% if page.layout == 'inscreva' %}
+  <script src="{{ site.baseurl }}/js/tingle.min.js"></script>
+  <script type="text/javascript">
+
+    /* Modal big */
+
+    var modalBigContent = new tingle.modal();
+    var btn3 = document.querySelector('.modal');
+    btn3.addEventListener('click', function(){
+        modalBigContent.open();
+    });
+    modalBigContent.setContent(document.querySelector('.modal-content').innerHTML);
+
+    
+  </script>
+{% endif %}
 </html>

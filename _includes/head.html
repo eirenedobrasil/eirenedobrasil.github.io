@@ -8,10 +8,16 @@
   <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
   <title>{{ site.title }} | {{ page.title }}</title>
   <link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | prepend: site.baseurl }}" />
+
+  {% if page.layout == 'inscreva' %}
+    <link rel="stylesheet" href="{{ '/css/tingle.css' | prepend: site.baseurl }}">
+  {% endif %}
+
+
   <link href="https://fonts.googleapis.com/css?family=Chivo:400,400i,900,900i|Unna:400,400i,700" rel="stylesheet"> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
 </head>
 <body>
-  <div class="main">
+  <div id="swup" class="main">
   

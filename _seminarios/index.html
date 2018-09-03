@@ -3,15 +3,23 @@ layout: main-page
 title: Leve o Eirene até sua igreja
 type: Seminários
 img: ../img/seminarios.jpg
+permalink: /seminarios/
 hero: seminarios
 meta: |
-  Os seminários são cursos livres montados pelos nossos professores. Foram montados de forma que podem ser levados para qualquer lugar do Brasil.
+  Um dos nossos seminários, o PEM — Programa de Enriquecimento Matrimonial, vem sendo aperfeiçoado mundialmente faz mais de 30 anos.  Ele nos acompanha desde a fundação do Eirene na Argentina e é aplicado em várias partes do mundo por psicólogos cristãos **harmonizando casamentos mundo afora.**
+
+  > Os seminários são cursos livres montados pelos nossos professores  que podem ser levados para qualquer lugar do Brasil.
+    
+  Temos seminários interativos para vários públicos:
+
+  * Jovens e adolescentes;
+  * Pastores;
+  * Pais e mães; 
+  * Profissionais da família;
+  * Casais.
   
   Nossos seminários servem para cumprir a missão do Eirene, que é levar famílias à harmonia.
-  
-  Temos seminários interativos para jovens e adolescentes, outros para pastores, para pais e mães, para profissionais do cuidado e também para casais.
-  
-  O PEM, Programa de Enriquecimento Matrimonial, é um seminário que vem sendo aperfeiçoado mundialmente faz mais de 30 anos. Ele nos acompanha desde a fundação do Eirene na Argentina e é aplicado em várias partes do mundo por psicólogos cristãos harmonizando casamentos.
+
 ---
 
   
@@ -19,12 +27,21 @@ meta: |
   
   {% for seminarios in site.seminarios %}
     {% if seminarios.layout == 'inscreva' %}
-    <div class="card">
-      <h3><a href="{{ site.baseurl }}/{{ seminarios.url }}">{{ seminarios.title }}</a></h3>
-      <a href="{{ site.baseurl }}/{{ seminarios.url }}"><img src="{{ seminarios.img }}" alt=""></a>
-      <p>{{ seminarios.meta }}</p>
-    
-      <a href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+    <div class="box">
+      <div class="box--card --shadow --rullerOnTop box--anim">
+        <div class="box--cardImg">
+          <a href="{{ site.baseurl }}/{{ seminarios.url }}"><img src="{{ seminarios.img }}" alt="">
+        </div>
+        <div class="box--cardText">
+          <h4><a href="{{ site.baseurl }}/{{ seminarios.url }}">{{ seminarios.title }}</a></h4>
+          </a>
+          <p>{{ seminarios.meta }}</p>
+              
+          <p>
+            <a class="button--dark" href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+          </p>
+        </div>
+      </div>
     </div>
     {% endif %}
   {% endfor %}

@@ -6,23 +6,44 @@ img: ../img/cursos.jpg
 permalink: /cursos/
 hero: cursos
 meta: |
-  O Eirene existe para levar famílias à harmonia. Uma forma de nós alcançarmos esse objetivo é dando treinamento acadêmico para leigos e profissionais.
+  
 
-  Nós temos cursos voltados para pessoas em vários níveis acadêmicos, desde aqueles que trabalham profissionalmente com famílias e procuram uma formação que vá lhes dar ferramentas melhores no trabalho, até para aqueles que queiram somente se aprofundar no assunto família sem a exigência de uma graduação.
+  Nossos cursos dão treinamento acadêmico para voluntários e profissionais da família.
 
-  Todos esses cursos são certificados e podem ter um peso muito positivo no seu currículo.
+  > Para você conseguir ajudar as famílias da sua comunidade ou consultório, você precisa do conhecimento e das ferramentas certas.
+
+  Nós temos cursos voltados para pessoas em vários níveis acadêmicos:
+
+  * Profissionais da famílias;
+  * Pastores;
+  * Psicólogos;
+  * Voluntários de comunidades e instituições cristãs.
+
+  *Todos esses cursos são certificados, **da especialização à pós-graduação**, e podem ter um peso muito positivo no seu currículo.*
 ---
 
 
 {% for cursos in site.cursos %}
   
   {% if cursos.layout == 'inscreva' %}
-  <div class="card">
-    <h3><a href="{{ site.baseurl }}/{{ cursos.url }}">{{ cursos.title }}</a></h3>
-    <a href="{{ site.baseurl }}/{{ cursos.url }}"><img src="{{ cursos.img }}" alt=""></a>
-    <p>{{ cursos.meta }}</p>
-    
-    <a href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais sobre o Curo de {{ cursos.title }}</a>
+  <div class="box">
+    <div class="box--card --shadow --rullerOnTop box--anim">
+      <div class="box--cardImg">
+        <a href="{{ site.baseurl }}/{{ cursos.url }}"><img src="{{ cursos.img }}" alt=""></a>
+      </div>
+
+      <div class="box--cardText">
+        <h4><a href="{{ site.baseurl }}/{{ cursos.url }}">{{ cursos.title }}</a></h4>
+             
+        <p>O Eirene existe para levar famílias à harmonia. Uma forma de nós alcançarmos esse objetivo é dando treinamento acadêmico para leigos e profissionais.</p>
+            
+        <p>Nós temos cursos voltados para pessoas em vários níveis acadêmicos, desde aqueles que trabalham profissionalmente com famílias e procuram uma formação que vá lhes dar ferramentas melhores no trabalho, até para aqueles que queiram somente se aprofundar no assunto família sem a exigência de uma graduação.</p>
+            
+        <p>Todos esses cursos são certificados e podem ter um peso muito positivo no seu currículo.</p>
+        
+        <a class="button--dark" href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais sobre o Curso de {{ cursos.title }}</a>
+      </div>
+    </div>
   </div>
   {% endif %}
   

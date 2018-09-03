@@ -1,15 +1,25 @@
 
   <header>
-    <div class="brand">
-      <a href="{{ site.baseurl }}/index.html"><img src="{{ '/img/logo.png' | prepend: site.baseurl }}" alt="Logo do Eirene"></a>
+  {% if page.type == 'index' %}
+    <div class="hero hero--index">
+      <div class="brand--index">
+        <a href="{{ site.baseurl }}/index.html"><img src="{{ '/img/logo-white.png' | prepend: site.baseurl }}" alt="Logo do Eirene"></a>
+      </div>
+      
+      <h2>Entender o contexto e a história de uma família é essencial para que profissionais e profissionais ajudem as pessoas a terem uma vida e relacionamentos saudáveis.</h2>
     </div>
+  {% else %}
     
+    <div class="brand">
+      <a href="{{ site.baseurl }}/index.html"><img src="{{ '/img/logo-white-small.png' | prepend: site.baseurl }}" alt="Logo do Eirene"></a>
+    </div>
+
+    <h1 class="header--title">Levando famílias à harmonia</h1>
+
+  {% endif %}
+
     <nav>
       {% include nav.html %}
     </nav>
 
-    <div class="hero hero--index">
-      <h1>Levando famílias à harmonia</h1>
-      <h2>Entender o contexto e a história de uma família é essencial para que leigos e profissionais ajudem as pessoas a terem uma vida e relacionamentos saudáveis.</h2>
-    </div>
   </header>
