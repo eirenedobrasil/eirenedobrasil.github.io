@@ -1,7 +1,8 @@
 title: Eirene
-description: 
+description: >
   Levando famílias à harmonia
-baseurl: "/" 
+
+baseurl: "" 
 url: "https://eirenedobrasil.netlify.com" 
 
 permalink: pretty

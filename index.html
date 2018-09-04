@@ -7,12 +7,12 @@ type: index
 
   {% for cursos in site.cursos %}
     {% if cursos.title and cursos.layout == 'main-page' %}
-      <div onclick="location.href='{{ site.baseurl }}/{{ cursos.url }}';" class="box --hidden --anchor">
+      <div onclick="location.href='{{ site.url }}/{{ cursos.url }}';" class="box --hidden --anchor">
         <div class="box--esquerda box--anim box--cursos"><h3>{{ cursos.title }}</h3></div>
           <div class="box--direita --rullerOnTop">
             <h4>Nossos Cursos</h4>
             {{ cursos.meta | markdownify }}
-            <a class="button--dark" href="{{ site.baseurl }}/{{ cursos.url }}">Quero saber mais…</a>
+            <a class="button--dark" href="{{ site.url }}/{{ cursos.url }}">Quero saber mais…</a>
           </div>
       </div>
     {% endif %}
@@ -22,11 +22,11 @@ type: index
   {% for seminarios in site.seminarios %}
     {% if seminarios.title and seminarios.layout == 'main-page' %}
       
-      <div onclick="location.href='{{ site.baseurl }}/{{ seminarios.url }}';" class="box --hidden --anchor">
+      <div onclick="location.href='{{ site.url }}/{{ seminarios.url }}';" class="box --hidden --anchor">
           <div class="box--esquerda --rullerOnTop">
             <h4>Nossos Seminários</h4>
             {{ seminarios.meta | markdownify }}
-            <a class="button--dark" href="{{ site.baseurl }}/{{ seminarios.url }}">Quero saber mais…</a>
+            <a class="button--dark" href="{{ site.url }}/{{ seminarios.url }}">Quero saber mais…</a>
           </div>
           <div class="box--direita box--anim box--seminarios">
             <h3>{{ seminarios.title }}</h3>
@@ -40,12 +40,12 @@ type: index
   
     
      
-      <div onclick="location.href='{{ site.baseurl }}/{{ post.url }}'" class="box --hidden --anchor">
+      <div onclick="location.href='{{ site.url }}/{{ post.url }}'" class="box --hidden --anchor">
     
       {% for post in site.posts limit:6 %}
         <div class="box--card --shadow --rullerOnTop box--anim">
           <div class="box--cardImg">
-            <img src="{{ site.baseurl }}/{{ post.img }}" alt="">
+            <img src="{{ site.url }}/{{ post.img }}" alt="">
           </div>
           <div class="box--cardText">
             <h5>{{ post.tag }}</h5>
@@ -56,7 +56,7 @@ type: index
       {% endfor%}
      
         
-    <p class="--more"><a href="{{ site.baseurl }}/noticias.html">Notícias antigas »</a></p> 
+    <p class="--more"><a href="{{ site.url }}/noticias.html">Notícias antigas »</a></p> 
     </div> 
   </div>
   
@@ -65,14 +65,14 @@ type: index
     <h3>Publicações</h3>
     <div class="box --hidden">
       <div class="box--full">
-        <p>Parte da nossa <a href="{{ site.baseurl }}/quemsomos/">missão</a> é publicar conteúdo que ajude  pastores, psicólogos e voluntários a estarem melhores preparados a cuidarem da família. </p>
+        <p>Parte da nossa <a href="{{ site.url }}/quemsomos/">missão</a> é publicar conteúdo que ajude  pastores, psicólogos e voluntários a estarem melhores preparados a cuidarem da família. </p>
           
-        <h4><a href="{{ site.baseurl }}/artigos/">Artigos</a></h4>
-        <p>Os <a href="{{ site.baseurl }}/artigos/">artigos</a> são escritos pelos nossos professores e podem ser lidos na <a href="{{ site.baseurl }}/artigos/">página dos artigos.</a></p> 
+        <h4><a href="{{ site.url }}/artigos/">Artigos</a></h4>
+        <p>Os <a href="{{ site.url }}/artigos/">artigos</a> são escritos pelos nossos professores e podem ser lidos na <a href="{{ site.url }}/artigos/">página dos artigos.</a></p> 
         
-        <h4><a href="{{ site.baseurl }}/monografias/">Monografias</a></h4>
-        <p>Você pode também consultar as <a href="{{ site.baseurl }}/monografias/">monografias</a> publicadas pelos nossos alunos escritos no final dos <a href="{{ site.baseurl }}/cursos/">nossos cursos.</a></p>
-        <p>As monografias podem ser adquiridas por correio ou por email. Mais informações estão disponíveis na <a href="{{ site.baseurl }}/monografias/">página das monografias.</a></p>
+        <h4><a href="{{ site.url }}/monografias/">Monografias</a></h4>
+        <p>Você pode também consultar as <a href="{{ site.url }}/monografias/">monografias</a> publicadas pelos nossos alunos escritos no final dos <a href="{{ site.url }}/cursos/">nossos cursos.</a></p>
+        <p>As monografias podem ser adquiridas por correio ou por email. Mais informações estão disponíveis na <a href="{{ site.url }}/monografias/">página das monografias.</a></p>
       </div>
     </div> 
   </div>
