@@ -1,11 +1,15 @@
 <button class="cta modal">{{ page.cta }}</button>
 
 <div class="modal-content">
-    <h1 class="plop">Big content with scroll</h1>
-    <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-    <img src="https://placehold.it/800x400" height="400" alt="">
-    <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-    <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-    <img src="https://placehold.it/800x400" height="400" alt="">
-    <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<form name="{{ page.form }}" netlify>
+  <p>
+    <label>Meu nome é<input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Meu email é<input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">{{ page.cta }}</button>
+  </p>
+</form>
 </div>

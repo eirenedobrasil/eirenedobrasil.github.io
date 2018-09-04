@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/filhos_felizes.jpg
 meta: |
     Cuidar dos filhos não é tarefa fácil. É comum não sabermos qual o caminho a seguir. Esse seminário é baseado no engajamento dos pais para potencializar um crescimento saudável dos seus filhos.
-cta: Quero aconselhar pessoas
+cta: Quero ajudar os pais
 permalink: /filhos_felizes/
+form: filhos-felizes
 ---
 
 ## Toda família é um sistema

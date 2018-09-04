@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/antes_casar.jpg
 meta: |
     É inevitável que um casamento vá passar por algum problema. Esse seminário pretende fortalecer o casal pra que quando os problemas aparecerem o casal tenha ferramentas para lidar com eles.
-cta: Quero aconselhar pessoas
+cta: Quero previnir meu casamento
 permalink: /antes-casar/
+form: antes-casar
 ---
 
 > O melhor momento para criar alicerces fortes é quando a família ainda está em formação.

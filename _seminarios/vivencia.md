@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/vivencia.jpg
 meta: |
     Um trabalho preventivo cuidando da saúde de pastores e missionários baseado na psicologia do trabalho.
-cta: Quero aconselhar pessoas
+cta: Quero cuidar de pastores e missionários
 permalink: /vivencia/
+form: vivencia
 ---
 
 

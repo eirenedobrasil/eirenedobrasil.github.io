@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/educacao.jpg
 meta: |
     Um seminário para jovens visando seu crescimento pessoal.
-cta: Quero aconselhar pessoas
+cta: Quero ajudar os jovens
 permalink: /educacao/
+form: educacao
 ---
 
 > Jesus ia crescendo em sabedoria, estatura e graça diante de Deus e dos homens. (NVI)

@@ -7,6 +7,7 @@ permalink: /aconselhamento/
 meta: |
     Nós construímos o curso de Aconselhamento Pastoral Familiar pensando nos problemas que pastores e missionários encontram em suas comunidades. Esse curso dá ferramentas eficientes para entenderem e solucionarem os problema da família pós-moderna.
 cta: Quero aconselhar pessoas
+form: aconselhamento
 ---
 
 ## Resolvendo problemas além da superfície

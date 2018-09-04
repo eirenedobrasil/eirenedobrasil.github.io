@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/luto.jpg
 meta: |
     Ao invés de fugir do luto, criamos um espaço pra poder conversar e ter as ferramentas certas para poder passar com saúde por esses momentos difíceis.
-cta: Quero aconselhar pessoas
+cta: Quero conversar sobre luto
 permalink: /luto/
+form: luto
 ---
 
 > Hoje em dia, o luto parece uma falha não desejada e passa a ser escondido e negado.

@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/contemporanea.jpg
 meta: |
     Juntando psicologia e a espiritualidade, estudamos como as famílias se manifestam nos dias de hoje com o objetivo de promover a harmonia familiar.
-cta: Quero aconselhar pessoas
+cta: Quero entender a família contemporânea
 permalink: /contemporanea/
+form: contemporanea
 ---
 
 Hoje em dia, famílias se encontram perplexas, confusas, paralisadas ou mesmo em decomposição.

@@ -7,6 +7,7 @@ permalink: /terapia/
 meta: |
     O curso de especialização em Terapia Familiar é direcionado exclusivamente para psicólogos, psiquiatras e médicos de família. Essa especialização foi construída para profissionais da área psicológica que queiram aprender a trabalhar com foco em casais e famílias de uma forma integral.
 cta: Quero ser um Terapeuta Familiar
+form: terapia
 ---
 
 ## O erro de terapeutas familiares

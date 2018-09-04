@@ -7,6 +7,7 @@ permalink: /assessor/
 meta: |
     Esse é um curso voltado para qualquer um que quer trazer harmonia às famílias. É nosso curso mais básico e não tem nenhum pré requisito. É voltado pra quem quer aprofundar seus estudos na área da família.
 cta: Quero ser um Assessor Familiar
+form: assessor
 ---
 
 ## Saúde e harmonia nas famílias da sua igreja

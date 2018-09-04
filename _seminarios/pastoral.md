@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/pastoral.jpg
 meta: |
     Com as ferramentas certas, as pessoas podem protagonizar a recuperação das crises das suas vidas.
-cta: Quero aconselhar pessoas
+cta: Quero ajudar pessoas em crise
 permalink: /crise-pastoral/
+form: crise-pastoral
 ---
 
 > Ajudando pessoas em crise a serem protagonistas da sua recuperação

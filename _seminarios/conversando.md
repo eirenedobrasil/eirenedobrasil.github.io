@@ -5,8 +5,9 @@ type: Seminários
 img: ../img/seminarios/conversando.jpg
 meta: |
     Uma série de oficinas interativas para aprofundar temas que circulam no universo familiar.
-cta: Quero aconselhar pessoas
+cta: Quero conversar!
 permalink: /conversando/
+form: conversando
 ---
 
 > Vamos mudar juntos!
