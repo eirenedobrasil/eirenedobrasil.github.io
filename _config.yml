@@ -7,8 +7,7 @@ baseurl: ""
 =======
 description: 
   Levando famílias à harmonia
-baseurl: "/" 
->>>>>>> 4abe5d67fbfc6c884eb8cf1a15d820b1a1f212da
+baseurl: "" 
 url: "https://eirenedobrasil.netlify.com" 
 
 permalink: pretty
