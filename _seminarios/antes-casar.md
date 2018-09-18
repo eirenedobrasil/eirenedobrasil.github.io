@@ -7,7 +7,7 @@ meta: |
     É inevitável que um casamento vá passar por algum problema. Esse seminário pretende fortalecer o casal pra que quando os problemas aparecerem o casal tenha ferramentas para lidar com eles.
 cta: Quero previnir meu casamento
 permalink: /antes-casar/
-form: antes-casar
+form: Seminário Antes de casar, vamos conversar?
 ---
 
 > O melhor momento para criar alicerces fortes é quando a família ainda está em formação.

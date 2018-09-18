@@ -1,15 +1,26 @@
 <button class="cta modal">{{ page.cta }}</button>
 
 <div class="modal-content">
-<form name="{{ page.form }}" netlify>
+
+<h3>Já que você tem interesse no {{ page.form }}, precisamos do seu nome e email para que possamos entrar em contato com você.</h3>
+<form class="formulario" action="https://getsimpleform.com/messages?form_api_token=efad71cf63f22a3ab9a17ccaf0d9b612" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type='hidden' name='redirect_to' value='{{ site.url }}//thanks/' />
+  
+  <!-- all your input fields here.... -->
   <p>
-    <label>Meu nome é<input type="text" name="name" /></label>
+    <label for="name">Meu nome é</label>
+    <input type='text' name="name" id="name" placeholder="João Silva" required/>
   </p>
+
   <p>
-    <label>Meu email é<input type="email" name="email" /></label>
+    <label for="email">Meu email é</label>
+    <input type="email" name="email" id="email" placeholder="meu@mail.com" required>
   </p>
-  <p>
-    <button type="submit">{{ page.cta }}</button>
-  </p>
+
+  <input type="hidden" name="curso" value="{{ page.form }}">
+
+  <input type='submit' class="button--dark" value='Tenho interesse no {{ page.form }}' />
 </form>
+
 </div>
