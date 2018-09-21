@@ -7,7 +7,7 @@ meta: |
     Cuidar dos filhos não é tarefa fácil. É comum não sabermos qual o caminho a seguir. Esse seminário é baseado no engajamento dos pais para potencializar um crescimento saudável dos seus filhos.
 cta: Quero ajudar os pais
 permalink: /filhos_felizes/
-form: filhos-felizes
+form: Seminário Projeto Filhos Felizes
 ---
 
 ## Toda família é um sistema

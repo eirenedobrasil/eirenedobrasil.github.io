@@ -7,7 +7,7 @@ meta: |
     Um seminário para jovens visando seu crescimento pessoal.
 cta: Quero ajudar os jovens
 permalink: /educacao/
-form: educacao
+form: Seminário Educação para a vida
 ---
 
 > Jesus ia crescendo em sabedoria, estatura e graça diante de Deus e dos homens. (NVI)

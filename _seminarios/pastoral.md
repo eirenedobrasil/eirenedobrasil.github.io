@@ -7,7 +7,7 @@ meta: |
     Com as ferramentas certas, as pessoas podem protagonizar a recuperação das crises das suas vidas.
 cta: Quero ajudar pessoas em crise
 permalink: /crise-pastoral/
-form: crise-pastoral
+form: Seminário PAPEC
 ---
 
 > Ajudando pessoas em crise a serem protagonistas da sua recuperação

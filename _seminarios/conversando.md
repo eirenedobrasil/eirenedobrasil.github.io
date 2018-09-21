@@ -7,7 +7,7 @@ meta: |
     Uma série de oficinas interativas para aprofundar temas que circulam no universo familiar.
 cta: Quero conversar!
 permalink: /conversando/
-form: conversando
+form: Seminário Conversando sobre…
 ---
 
 > Vamos mudar juntos!

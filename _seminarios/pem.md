@@ -7,7 +7,7 @@ meta: |
     Um seminário que acontece em várias partes do mundo com a função de enriquecer o relacionamento entre marido e mulher e criar harmonia em suas famílias.
 cta: Quero enriquecer relacionamentos
 permalink: /pem/
-form: pem
+form: Seminário PEM
 ---
 
 > Solidificando famílias para o crescimento da igreja e desenvolvimento do Reino de Deus

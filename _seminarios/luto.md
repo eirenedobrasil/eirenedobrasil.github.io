@@ -7,7 +7,7 @@ meta: |
     Ao invés de fugir do luto, criamos um espaço pra poder conversar e ter as ferramentas certas para poder passar com saúde por esses momentos difíceis.
 cta: Quero conversar sobre luto
 permalink: /luto/
-form: luto
+form: Seminário Aprendendo a lidar com o luto
 ---
 
 > Hoje em dia, o luto parece uma falha não desejada e passa a ser escondido e negado.

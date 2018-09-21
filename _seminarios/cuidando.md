@@ -7,7 +7,7 @@ meta: |
     O profissional que cuida de pessoas sofre muitos desgastes. Nesse seminário estudamos como esses profissionais podem e devem cuidar da sua saúde emocional e psicológica.
 cta: Quero cuidar de quem cuida
 permalink: /cuidando/
-form: cuidando
+form: Seminário Cuidando de quem cuida
 ---
 
 

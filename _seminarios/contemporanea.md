@@ -7,7 +7,7 @@ meta: |
     Juntando psicologia e a espiritualidade, estudamos como as famílias se manifestam nos dias de hoje com o objetivo de promover a harmonia familiar.
 cta: Quero entender a família contemporânea
 permalink: /contemporanea/
-form: contemporanea
+form: Seminário Questões contemporâneas da família
 ---
 
 Hoje em dia, famílias se encontram perplexas, confusas, paralisadas ou mesmo em decomposição.
