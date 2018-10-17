@@ -9,7 +9,7 @@ type: index
     {% if cursos.title and cursos.layout == 'main-page' %}
       <div onclick="location.href='{{ site.url }}/{{ cursos.url }}';" class="box --hidden --anchor">
         <div class="box--esquerda box--anim box--cursos"><h3>{{ cursos.title }}</h3></div>
-          <div class="box--direita --rullerOnTop">
+          <div class="box--direita box--small --rullerOnTop">
             <h4>Nossos Cursos</h4>
             {{ cursos.meta | markdownify }}
             <a class="button--dark" href="{{ site.url }}/{{ cursos.url }}">Quero saber mais…</a>
@@ -23,14 +23,16 @@ type: index
     {% if seminarios.title and seminarios.layout == 'main-page' %}
       
       <div onclick="location.href='{{ site.url }}/{{ seminarios.url }}';" class="box --hidden --anchor">
-          <div class="box--esquerda --rullerOnTop">
+          <div class="box--direita box--anim box--seminarios">
+            <h3>{{ seminarios.title }}</h3>
+          </div>
+
+          <div class="box--esquerda --rullerOnTop box--small">
             <h4>Nossos Seminários</h4>
             {{ seminarios.meta | markdownify }}
             <a class="button--dark" href="{{ site.url }}/{{ seminarios.url }}">Quero saber mais…</a>
           </div>
-          <div class="box--direita box--anim box--seminarios">
-            <h3>{{ seminarios.title }}</h3>
-          </div>
+          
       </div>
     {% endif %}
   {% endfor%}

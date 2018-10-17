@@ -250,6 +250,7 @@ nav {
   display: grid;
   grid-template-columns: 
     minmax(1rem, 1fr) minmax(auto, 29rem) minmax(auto, 29rem) minmax(1rem, 1fr);
+  grid-template-rows: 100% 100%;
   transition: all .2s ease-in-out;
 }
 
@@ -260,7 +261,6 @@ nav {
 .box--card {
   grid-column: 2/4;
   display: flex;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   border: 1px solid #ccc;
   transition: ease 1s;
@@ -290,10 +290,12 @@ nav {
 
 .box > .box--esquerda {
   grid-column: 2/3;
+  grid-row: 1/3;
 }
 
 .box > .box--direita {
   grid-column: 3/4;
+  grid-row: 1/3;
   padding-left: 1rem;
 }
 
@@ -354,6 +356,24 @@ nav {
 @media screen and (max-width: 980px) {
   .copy {
     margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box > .box--direita, .box > .box--esquerda {
+    grid-column: 2/4;
+  }
+
+  .box > .box--cursos, .box > .box--seminarios {
+    grid-row: 1/2;
+  }
+
+  .box > .box--small {
+    grid-row: 2/3;
+  }
+
+  .box--card{
+    display: block;
   }
 }
 
