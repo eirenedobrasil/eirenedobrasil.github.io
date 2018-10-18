@@ -239,6 +239,34 @@ nav {
   mix-blend-mode: difference;
 }
 
+.showOnMobile {
+  display: none;
+}
+
+@media screen and (max-width: 820px) {
+  .hiddenOnMobile {
+    display: none;
+  }
+
+  .hiddenOnMobile--item {
+    display: block;
+    border-bottom: solid 1px var(--text);
+    position: relative;
+    left: 4rem;
+  }
+
+  .showOnMobile {
+    display: inline;
+    border: solid 1px var(--text);
+    border-radius: 3px;
+    padding: .6rem;
+    margin-top: -0.5rem;
+  }
+
+  nav a { border-left: 0; }
+
+}
+
 /* CONTENT */
 
 .content{ 

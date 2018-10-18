@@ -1,11 +1,14 @@
-<div class="menu-item">
-  <a  href="{{ site.url }}/cursos/" class="call">Estude com a gente</a>
 
-  <a href="{{ site.url }}/seminarios/">Leve o Eirene até sua igreja</a>
+  <a class="alwaysShow" href="{{ site.url }}/cursos/">Estude com a gente</a>
 
-  <a href="{{ site.url }}/quem-somos/">Quem somos</a>
+<div id="myLinks" class="hiddenOnMobile">
+  <a class="hiddenOnMobile--item" href="{{ site.url }}/seminarios/">Leve o Eirene até sua igreja</a>
 
-  <a href="{{ site.url }}/artigos/">Artigos</a>
+  <a class="hiddenOnMobile--item" href="{{ site.url }}/quem-somos/">Quem somos</a>
 
-  <a href="{{ site.url }}/monografias/">Monografias</a>
+  <a class="hiddenOnMobile--item" href="{{ site.url }}/artigos/">Artigos</a>
+
+  <a class="hiddenOnMobile--item" href="{{ site.url }}/monografias/">Monografias</a>
 </div>
+
+<a href="javascript:void(0);" class="showOnMobile" onclick="showLinks()">Menu</a>
