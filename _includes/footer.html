@@ -32,10 +32,12 @@
   <script type="text/javascript">
     function showLinks() {
       var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
+      if (x.style.opacity === "1") {
+        x.style.opacity = "0";
+        x.transition = "opacity 1s";
       } else {
-        x.style.display = "block"
+        x.style.opacity = "1";
+        x.transition = "opacity 1s";
       }
     }
   </script>
