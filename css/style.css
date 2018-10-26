@@ -243,25 +243,46 @@ nav {
   display: none;
 }
 
+.alwaysShow {
+  margin-top: -1rem;
+}
+
 @media screen and (max-width: 820px) {
+  nav {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 50% 50%;
+  }
+
+  .alwaysShow {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
   .hiddenOnMobile {
     opacity: 0;
-    transition: opacity 1s;
+    transition: ease 1s;
+    height: 0;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 2/3;
   }
 
   .hiddenOnMobile--item {
     display: block;
-    border-bottom: solid 1px var(--text);
-    position: relative;
-    left: 4rem;
+    border: solid 1px var(--text);
+    margin-bottom: .2rem;
   }
 
   .showOnMobile {
     display: inline;
+    height: 2.7rem;
     border: solid 1px var(--text);
     border-radius: 3px;
     padding: .6rem;
     margin-top: -0.5rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 
   nav a { border-left: 0; }
@@ -457,8 +478,8 @@ nav {
   display: block;
   position: relative;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
-  margin-top: -100vh;
-  height: 100vh;
+  margin-top: -150px;
+  height: 150px;
   width: 100%;
   content: '';
 }
