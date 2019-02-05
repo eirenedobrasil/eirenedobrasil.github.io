@@ -430,6 +430,7 @@ nav {
 
   .box > .box--cursos, .box > .box--seminarios {
     grid-row: 1/2;
+    height: 17rem;
   }
 
   .box > .box--small {
