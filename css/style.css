@@ -314,7 +314,6 @@ nav {
   display: grid;
   grid-template-columns: 
     minmax(1rem, 1fr) minmax(auto, 29rem) minmax(auto, 29rem) minmax(1rem, 1fr);
-  grid-template-rows: 100% 100%;
   transition: all .2s ease-in-out;
 }
 
