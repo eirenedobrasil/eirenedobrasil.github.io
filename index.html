@@ -39,27 +39,43 @@ type: index
     
     <div class="divider">
       <h3>O que estamos fazendo</h3>
-  
+
+      <div class="box --hidden --anchor">
     
+      <div class="agenda">
+        <h1>Setembro</h1>
+        {% for agenda in site.data.agenda %}
+          {% if agenda.date contains "/09/" %}
+          {% include agenda.html %}
+          {% endif %}
+        {% endfor %}
+        <h1>Outubro</h1>
+        {% for agenda in site.data.agenda %}
+          {% if agenda.date contains "/10/" %}
+          {% include agenda.html %}
+          {% endif %}
+        {% endfor %}
+        <h1>Novembro</h1>
+        {% for agenda in site.data.agenda %}
+          {% if agenda.date contains "/11/" %}
+          {% include agenda.html %}
+          {% endif %}
+        {% endfor %}
+        <h1>Dezembro</h1>
+        {% for agenda in site.data.agenda %}
+          {% if agenda.date contains "/12/" %}
+          {% include agenda.html %}
+          {% endif %}
+        {% endfor %}
+        <h1>2020</h1>
+        {% for agenda in site.data.agenda %}
+          {% if agenda.date contains "2020" %}
+          {% include agenda.html %}
+          {% endif %}
+        {% endfor %}
+      </div>
      
-      <div onclick="location.href='{{ site.url }}/{{ post.url }}'" class="box --hidden --anchor">
-    
-      {% for post in site.posts limit:6 %}
-        <div class="box--card --shadow --rullerOnTop box--anim">
-          <div class="box--cardImg">
-            <img src="{{ site.url }}/{{ post.img }}" alt="">
-          </div>
-          <div class="box--cardText">
-            <h5>{{ post.tag }}</h5>
-            <h4>{{ post.title }}</h4>
-            <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
-          </div>
-        </div>
-      {% endfor%}
-     
-        
-    <p class="--more"><a href="{{ site.url }}/noticias.html">Notícias antigas »</a></p> 
-    </div> 
+      </div> 
   </div>
   
   

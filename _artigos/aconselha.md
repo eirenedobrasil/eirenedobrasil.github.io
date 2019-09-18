@@ -1,7 +1,7 @@
 ---
 title: Com Quem o Líder se Aconselha?
 layout: texto
-autor: Noé Staley Gonçalves
+autor: Noé Stanley Gonçalves
 type: Artigos
 permalink: /aconselha/
 ---

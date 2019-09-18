@@ -387,6 +387,25 @@ nav {
   margin: 1rem;
 }
 
+.agenda {
+  grid-column: 2/4;
+}
+
+.agenda h1 {
+  margin: 1.4rem 0 0;
+  color: var(--laranja);
+}
+
+.agenda h2 {
+  margin: 1rem 0 .5rem;
+  border-top: 2px solid;
+  padding: .2rem;
+}
+
+.agenda p {
+  margin-bottom: .5rem;
+}
+
 .box h4 {
   color: var(--laranja);
   text-transform: uppercase;
