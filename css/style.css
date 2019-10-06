@@ -250,7 +250,7 @@ nav {
   margin-top: -1rem;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 1038px) {
   nav {
     display: grid;
     grid-template-rows: auto auto;
