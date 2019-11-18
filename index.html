@@ -43,12 +43,6 @@ type: index
       <div class="box --hidden --anchor">
     
       <div class="agenda">
-        <h1>Outubro</h1>
-        {% for agenda in site.data.agenda %}
-          {% if agenda.date contains "/10/" %}
-          {% include agenda.html %}
-          {% endif %}
-        {% endfor %}
         <h1>Novembro</h1>
         {% for agenda in site.data.agenda %}
           {% if agenda.date contains "/11/" %}
